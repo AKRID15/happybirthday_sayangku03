@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💜 selamat ulang tahun sayangku cinta 💜</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: radial-gradient(circle at top left, #2e0854, #4b0082, #6c3483);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2 {
+            text-shadow: 0 0 10px rgba(255, 255, 255, .3)
+        }
+        
+        .page {
+            display: none;
+            padding: 30px 15px;
+            animation: fadeIn .8s ease
+        }
+        
+        .active {
+            display: block
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        /* animasi love */
+        
+        .love {
+            position: fixed;
+            width: 18px;
+            height: 18px;
+            background: rgba(255, 182, 193, .9);
+            transform: rotate(45deg);
+            animation: floatLove 6s linear infinite;
+            opacity: .7;
+            z-index: 0
+        }
+        
+        .love::before,
+        .love::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: rgba(255, 182, 193, .9)
+        }
+        
+        .love::before {
+            top: -9px;
+            left: 0
+        }
+        
+        .love::after {
+            left: -9px;
+            top: 0
+        }
+        
+        @keyframes floatLove {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1
+            }
+            100% {
+                transform: translateY(-800px) rotate(45deg);
+                opacity: 0
+            }
+        }
+        /* navbar */
+        
+        nav {
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(8px);
+            padding: 10px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav h3 {
+            margin: 0;
+            color: #ffb6c1;
+            font-size: 1.2em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, .3);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: .3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffb6c1;
+            text-shadow: 0 0 10px #fff;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: white;
+            margin: 4px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        /* responsive menu */
+        
+        @media(max-width:768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                position: absolute;
+                top: 50px;
+                left: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+        }
+        /* love grid */
+        
+        .love-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto
+        }
+        
+        .post-card {
+            background: rgba(255, 255, 255, .08);
+            border-radius: 20px;
+            padding: 15px;
+            cursor: pointer;
+            transition: .3s;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 255, 255, .1)
+        }
+        
+        .post-card:hover {
+            background: rgba(255, 255, 255, .15)
+        }
+        
+        .post-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, .2)
+        }
+        
+        .post-text {
+            font-style: italic;
+            color: #fce4ec;
+            margin-top: 10px
+        }
+        /* tentang ayang */
+        
+        .about-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            max-width: 800px;
+            gap: 20px
+        }
+        
+        .about-block img {
+            width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, .2)
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 250px;
+            font-style: italic;
+            color: #fce4ec
+        }
+        
+        .right {
+            flex-direction: row-reverse
+        }
+        /* galeri */
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 850px;
+            margin: 0 auto
+        }
+        
+        .gallery img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+            transition: .3s;
+            cursor: pointer
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 182, 193, .6)
+        }
+        /* lightbox & detail */
+        
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .85);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            padding: 20px;
+            flex-direction: column
+        }
+        
+        #lightbox-content {
+            max-width: 80%;
+            max-height: 80%;
+            text-align: center
+        }
+        
+        #lightbox img {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, .4)
+        }
+        
+        #lightbox p {
+            margin-top: 15px;
+            color: #fff;
+            font-style: italic
+        }
+        
+        #closeBtn {
+            margin-top: 15px;
+            background: #ff66c4;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer
+        }
+        /* detail post */
+        
+        #postDetail {
+            display: none;
+            max-width: 750px;
+            margin: auto;
+            text-align: center
+        }
+        
+        #postDetail img {
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, .3)
+        }
+        
+        #postDetail p {
+            margin-top: 15px;
+            font-style: italic;
+            color: #fce4ec
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- animasi love -->
+    <script>
+        function createLove() {
+            const l = document.createElement("div");
+            l.classList.add("love");
+            l.style.left = Math.random() * 100 + "vw";
+            l.style.animationDuration = 3 + Math.random() * 5 + "s";
+            document.body.appendChild(l);
+            setTimeout(() => l.remove(), 7000);
+        }
+        setInterval(createLove, 90);
+    </script>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h3>My True Love 💜</h3>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#" onclick="showPage('home')">🏠 Home</a>
+            <a href="#" onclick="showPage('tentang')">💬 Tentang</a>
+            <a href="#" onclick="showPage('love')">💘 Love</a>
+            <a href="#" onclick="showPage('galeri')">📸 Galeri</a>
+            <a href="#" onclick="showPage('pesan')">💌 Pesan</a>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <div class="page active" id="home" style="text-align:center">
+        <h1 class="fade-in">💜 Selamat Ulang Tahun Sayangku 💜</h1>
+
+        <p class="fade-in">
+            Hari ini langit tersenyum, karena seseorang yang paling berharga di hidupku sedang merayakan hari spesialnya. Setiap detik bersamamu selalu jadi anugerah yang gak pernah berhenti aku syukuri. Kamu adalah alasan kenapa dunia terasa lebih indah, kenapa
+            setiap pagi terasa punya makna, dan kenapa aku gak pernah berhenti berharap agar hari-harimu selalu penuh senyum. 🌙✨
+        </p>
+
+        <img src="img/ayang.jpg" style="width:250px;border-radius:20px;margin-top:20px" class="fade-in">
+
+        <p class="fade-in">
+            Terima kasih udah jadi cahaya di hidupku, yang selalu hadir di saat senang maupun saat aku butuh sandaran. Selamat ulang tahun, Ayangku. Semoga semua hal indah selalu berpihak padamu karena kamu pantas dapetin kebahagiaan sebesar cinta yang kamu kasih
+            ke aku dan ke orang-orang yang ayang sayangi 💞💐
+        </p>
+    </div>
+
+    <!-- Tambahkan efek fade-in -->
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observerHome = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        fadeElements.forEach(el => observerHome.observe(el));
+    </script>
+
+
+    <!-- LOVE -->
+    <div class="page" id="love">
+        <h2 style="text-align:center">💘 Cerita Cinta Kita 💘</h2>
+        <div id="loveGrid" class="love-grid">
+            <script>
+                for (let i = 1; i <= 10; i++) {
+                    document.write(`<div class='post-card' onclick='openPost(${i})'>
+      <img src='img/c${i}.jpg'><div class='post-text'>Klik untuk lihat kisah ke-${i}...</div></div>`);
+                }
+            </script>
+        </div>
+
+        <div id="postDetail">
+            <img id="postImg" src="">
+            <p id="postText"></p>
+            <button onclick="backToLove()" id="closeBtn">Kembali</button>
+        </div>
+        <!-- CATATAN PENUTUP ROMANTIS -->
+        <div class="note fade-in" id="closingNote">
+            <p>
+                Sebenarnya masih banyak banget kisah indah yang belum aku tulis di sini. Ada tawa kecil yang datang tiba-tiba, obrolan panjang tanpa rencana, dan momen sederhana yang mungkin keliatan biasa buat orang lain, tapi buat aku — semuanya berharga banget. Setiap
+                tempat yang pernah kita datangi, setiap cerita kecil yang kita bagi, semuanya nyimpen rasa yang gak bisa dijelasin cuma lewat kata. Mungkin gak semua kenangan bisa aku ceritain di sini, tapi setiap detik bareng kamu selalu tersimpan rapi
+                di ingatan. Karena dari semua hal indah yang pernah aku punya, kamu tetap jadi bagian paling manis yang pernah hadir di hidupku. 💜
+            </p>
+        </div>
+
+        <!-- MUSIK ROMANTIS UNTUK CATATAN PENUTUP -->
+        <audio id="noteMusic" src="music/romantic_instrument.mp3"></audio>
+
+        <style>
+            .note {
+                max-width: 850px;
+                margin: 80px auto 120px auto;
+                background: rgba(255, 255, 255, .08);
+                border-radius: 20px;
+                padding: 35px;
+                text-align: center;
+                color: #fce4ec;
+                font-style: italic;
+                box-shadow: 0 0 20px rgba(255, 255, 255, .1);
+                line-height: 1.8;
+                opacity: 0;
+                transform: translateY(40px);
+                transition: opacity 1.8s ease-out, transform 1.8s ease-out;
+            }
+            
+            .note.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+
+        <script>
+            // Efek fade-in lembut + musik instrumental saat catatan muncul
+            const closingNote = document.getElementById('closingNote');
+            const noteMusic = document.getElementById('noteMusic');
+            noteMusic.volume = 0.4; // volume lembut
+
+            const noteObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        if (noteMusic.paused) {
+                            noteMusic.play().catch(() => {});
+                        }
+                    } else {
+                        // kalau discroll ke atas, musik berhenti pelan
+                        if (!noteMusic.paused) {
+                            noteMusic.pause();
+                            noteMusic.currentTime = 0;
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.4
+            });
+
+            noteObserver.observe(closingNote);
+        </script>
+
+    </div>
+
+    <!-- TENTANG -->
+    <div class="page" id="tentang">
+        <h2 style="text-align:center">💬 Tentang Ayang 💬</h2>
+
+        <div class="about-block fade-in">
+            <img src="img/t1.jpg">
+            <div class="about-text">
+                Ayangku itu bukan cuma cantik dari luar, tapi hatinya juga tulus banget. Cara dia peduli, cara dia dengerin, bahkan hal-hal kecil yang dia lakuin tanpa sadar semuanya bikin aku ngerasa nyaman dan disayang tanpa syarat. Dia bisa lembut banget, tapi di
+                balik itu ada keteguhan yang bikin aku kagum. Senyumnya aja udah cukup buat ngilangin semua rasa lelah. 💕
+            </div>
+        </div>
+
+        <div class="about-block right fade-in">
+            <img src="img/t2.jpg">
+            <div class="about-text">
+                Setiap kali aku liat Ayang, aku selalu ngerasa beruntung banget. Dia itu sosok yang sederhana tapi punya cara luar biasa buat bikin aku ngerasa berarti. Cukup dengan satu tatapan atau senyum kecilnya aja, rasanya semua hal jadi lebih tenang. Ada sesuatu
+                dari Ayang yang gak bisa dijelasin, tapi selalu berhasil bikin aku jatuh cinta lagi dan lagi. 💜
+            </div>
+        </div>
+
+        <div class="about-block fade-in">
+            <img src="img/t3.jpg">
+            <div class="about-text">
+                Aku gak tahu gimana bisa seberuntung ini, tapi setiap hari aku bersyukur karena Tuhan ngasih aku kesempatan buat punya Ayang sebaik dia. Dia bikin aku ngerti kalau cinta itu gak harus besar atau mewah, tapi tentang hal-hal kecil yang dilakukan dengan
+                tulus. Ayangku adalah rumah yang selalu aku cari tempat paling nyaman buat pulang, dan alasan terindah kenapa aku terus bersyukur tiap hari. 🌸
+            </div>
+        </div>
+    </div>
+
+    <!-- Tambahkan script efek fade-in -->
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        // Efek muncul pelan saat elemen terlihat di layar
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        fadeEls.forEach(el => observer.observe(el));
+    </script>
+
+
+    <!-- GALERI -->
+    <div class="page" id="galeri">
+        <h2 style="text-align:center">📸 Galeri Kenangan 📸</h2>
+        <div class="gallery">
+            <script>
+                for (let i = 1; i <= 20; i++) {
+                    document.write(`<img src="img/g${i}.jpg" onclick="openLightbox('img/g${i}.jpg','')">`);
+                }
+            </script>
+        </div>
+    </div>
+
+    <!-- PESAN -->
+    <div class="page" id="pesan">
+        <h2 style="text-align:center">💌 Untuk ayang 💌</h2>
+        <div style="max-width:700px;margin:auto;background:rgba(255,255,255,.08);
+ border-radius:20px;padding:20px">
+            <p style="text-align: center;">Selamat ulang tahun, sayang. 💕</p>
+            <p>Di hari spesialmu ini, aku cuma mau bilang terima kasih sudah hadir dan membuat hidupku terasa lebih lengkap dan berwarna.</p>
+
+            <p>Semoga setiap langkahmu selalu dipenuhi kebahagiaan, semoga semua impianmu satu per satu jadi kenyataan, dan semoga aku selalu punya kesempatan untuk melihatmu tumbuh dan bahagia.</p>
+
+            <p>Kamu adalah salah satu hal terbaik yang pernah aku temui, dan aku bersyukur bisa ada di sampingmu, bukan cuma hari ini, tapi selamanya.</p>
+
+            <p>Selamat bertambah usia, cintaku. Jangan lupa, hari ini kamu berhak bahagia sepenuhnya. 💐</p>
+            <img src="img/p1.jpg" style="width:100%;border-radius:15px;margin-top:10px">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // ======== NAVBAR ========
+            window.toggleMenu = function() {
+                document.getElementById('navLinks').classList.toggle('show');
+            };
+
+            window.showPage = function(id) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById(id).classList.add('active');
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                document.getElementById('navLinks').classList.remove('show');
+            };
+
+            // ======== LIGHTBOX ========
+            window.openLightbox = function(src, txt) {
+                document.getElementById('lightbox-img').src = src;
+                document.getElementById('lightbox-text').innerText = txt;
+                document.getElementById('lightbox').style.display = 'flex';
+            };
+
+            window.closeLightbox = function() {
+                document.getElementById('lightbox').style.display = 'none';
+            };
+
+            // ======== DATA POST LOVE ========
+            const postsData = [{
+                img: 'img/c1.jpg',
+                text: 'Hari itu bukan sekadar pertemuan biasa tepatnya di mixue, tapi awal dari sesuatu yang hangat dan berharga. Kita masih malu-malu, belum berani foto muka, tapi udah bisa ketawa bareng main UNO balok kayak anak kecil yang gak pengen waktu cepet berlalu. Dari tawa sederhana itu, aku tahu... ada sesuatu yang istimewa antara kita. 💜'
+            }, {
+                img: 'img/c2.jpg',
+                text: 'Hari Sabtu itu masih aku inget jelas hari di mana aku jemput Ayang pulang sekolah, dan spontan kita mutusin buat main ke Pasir Putih. Kita sholat bareng, ngobrol sambil nikmatin angin sore, dan mulai berani foto-foto meski masih malu-malu. Rasanya tenang banget, kayak dunia ngasih waktu khusus buat kita berdua. Sampai akhirnya nyamuk dateng ngejar karena bajuku hitam, dan tiket parkir malah hilang… tapi anehnya, semua itu justru jadi bagian dari kenangan paling lucu dan manis yang gak bakal aku lupa. 💜'
+            }, {
+                img: 'img/c3.jpg',
+                text: 'Weekend itu kita main ke GOR bulutangkis, udah niat banget siap-siap dari rumah. Gak nyangka di sana aku malah ketemu temen lama, dan suasananya langsung cair. Ayang waktu itu masih agak malu, jadi gak ikut main, cuma nonton sambil senyum-senyum di pinggir lapangan. Tapi justru itu yang bikin momen hari itu berkesan — lihat dia duduk sambil ngeliatin aku main, sesekali ketawa, rasanya tenang banget. Setelahnya kita sempet foto-foto juga, dan entah kenapa, foto di hari itu keliatan sederhana tapi ngangenin banget. 💜'
+            }, {
+                img: 'img/c4.jpg',
+                text: 'Ini foto waktu kita ke Mixue lagi, kali kedua setelah pertemuan pertama yang masih malu-malu. Bedanya, kali ini semuanya terasa lebih hangat. Kita udah mulai bisa ketawa lepas, ngobrol tanpa canggung, dan saling godain sambil nikmatin pesanan yang udah kita tunggu. Ada tawa yang pecah di antara sendok es krim, dan foto-foto kecil yang jadi saksi betapa nyamannya aku di samping kamu. Mungkin kedengarannya sederhana, tapi buatku, waktu sesederhana itu justru yang paling berharga. 💜'
+            }, {
+                img: 'img/c5.jpg',
+                text: 'Kita balik lagi ke GOR bulutangkis, tapi kali ini suasananya beda banget. Awalnya tempatnya sepi, sampai akhirnya kita mutusin buat langsung ke rumah pemiliknya dan dikasih kunci biar bisa masuk. Rasanya lucu tapi juga hangat, kayak dunia cuma nyediain tempat itu buat kita berdua. Bedanya sama yang dulu, sekarang Ayang udah mau ikut main — ketawa, bercanda, dan sesekali ngeluarin ekspresi malu yang gemesin banget. Dari main bareng, foto-foto, sampai hal-hal kecil yang kita lakuin hari itu, semuanya terasa sempurna. 💜'
+            }, {
+                img: 'img/c6.jpg',
+                text: 'Hari itu sekolah rame banget, suasananya beda dari biasanya karena ada acara Hari Santri. Aku pake baju koko, Ayang pake gamis — dan entah kenapa, kita keliatan cocok banget bareng. Kita ikut acara sama-sama, ngobrol kecil di sela-sela rame orang, dan sesekali saling lempar senyum yang cuma kita berdua ngerti artinya. Setelah acara selesai, kita sempet ke kantin bareng, ketawa karena hal-hal kecil yang gak penting, terus foto-foto buat kenang-kenangan. Hari itu sederhana, tapi rasanya hangat banget — kayak Tuhan sengaja bikin momen itu biar aku bisa liat betapa indahnya Ayang dalam segala hal. 💜'
+            }, {
+                img: 'img/c7.jpg',
+                text: 'Pulang sekolah waktu itu, kita sepakat buat nyobain seblak yang lagi viral. Tempatnya gak terlalu besar, tapi suasananya nyaman banget — mungkin karena ada kamu di sana. Kita pesen seblak versi jumbo, terus nunggu sambil bercanda dan cerita hal-hal kecil yang cuma kita ngerti. Saat makan, kita sempet bikin video kenangan, ketawa karena pedesnya kebangetan, tapi justru itu yang bikin semuanya seru. Hari itu mungkin cuma tentang seblak, tapi buatku, momen sederhana itu berasa istimewa banget karena aku ngelaluinnya bareng kamu. 💜'
+            }, {
+                img: 'img/c8.jpg',
+                text: 'Masih inget banget hari itu di sekolah lagi ada acara lomba. Suasananya rame, tapi yang paling aku inget justru waktu kita mutusin buat antre di foto booth. Antriannya lumayan panjang, panas juga, tapi rasanya gak masalah karena aku bareng kamu. Itu pertama kalinya kita foto berdua di tempat kayak gitu — deg-degan, malu, tapi juga seneng banget. Pas hasil fotonya keluar, aku cuma bisa senyum, karena di kertas kecil itu ada kenangan berharga: dua orang yang gak nyangka bakal se-dekat ini. 💜'
+            }, {
+                img: 'img/c9.jpg',
+                text: 'Hari itu aku masih inget jelas, badan masih sakit gara-gara jatuh dari motor. Aku kira hari itu bakal sepi dan cuma diisi rasa nyeri, tapi ternyata kamu dateng. Padahal kamu baru selesai dari acara nikahan saudaramu, pasti capek, tapi kamu tetep nyempetin waktu buat jenguk aku. Kamu dateng sambil bawa makanan, senyum, dan perhatian yang gak bisa diganti apa pun. Rasanya campur aduk — kaget, seneng, haru, semuanya jadi satu. Aku ngeliat kamu duduk di samping, ngobrol ringan, sesekali nyuruh aku istirahat, dan di situ aku sadar… cinta itu gak melulu soal ketawa bareng, tapi tentang siapa yang tetep ada waktu kamu gak baik-baik aja. 💜'
+            }, {
+                img: 'img/c10.jpg',
+                text: 'Hari itu kita famtrip ke Trans Studio Bandung bareng amang dan bibi kamu, dan jujur… itu salah satu hari paling seru. Sebelum masuk, kita makan bareng dulu — ngobrol, ketawa, dan nikmatin suasana rame khas weekend. Begitu masuk, suasananya luar biasa ramai, tapi serunya gak kalah. Kita akhirnya mutusin buat naik wahana Jelajah, yang katanya santai, cuma keliling hutan Amazon. Awalnya tenang, adem, sampai bagian simulasi air terjun datang tiba-tiba dan jantung rasanya copot! 😆 Tapi di balik teriakan dan baju yang basah, aku seneng banget. Karena di momen itu, aku sadar… gak peduli seberapa deras air atau seberapa rame tempatnya, selama bareng kamu, semua terasa menyenangkan. 💜'
+            }];
+
+            const loveGrid = document.getElementById('loveGrid');
+            const closingNote = document.getElementById('closingNote');
+
+            postsData.forEach((p, i) => {
+                loveGrid.innerHTML += `
+            <div class='post-card' onclick='openPost(${i + 1})'>
+                <img src='${p.img}'><div class='post-text'>Klik untuk lihat kisah ke-${i + 1}...</div>
+            </div>`;
+            });
+
+            window.openPost = function(id) {
+                const d = postsData[id - 1];
+                document.getElementById('loveGrid').style.display = 'none';
+                document.getElementById('postDetail').style.display = 'block';
+                closingNote.style.display = 'none'; // sembunyikan note
+                document.getElementById('postImg').src = d.img;
+                document.getElementById('postText').innerText = d.text;
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+
+            window.backToLove = function() {
+                document.getElementById('postDetail').style.display = 'none';
+                document.getElementById('loveGrid').style.display = 'grid';
+                closingNote.style.display = 'block'; // tampilkan lagi note
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+
+            // ======== GALERI ========
+            const gallery = document.getElementById('gallery');
+            for (let i = 1; i <= 20; i++) {
+                gallery.innerHTML += `<img src="img/g${i}.jpg" onclick="openLightbox('img/g${i}.jpg','')">`;
+            }
+
+            // ======== MUSIK ========
+            const songs = [
+                "https://akrid15.vercel.app/music/lagu1.mp3",
+                "https://akrid15.vercel.app/music/lagu2.mp3"
+            ];
+
+            let currentSong = Math.floor(Math.random() * songs.length);
+            const music = document.getElementById("bgMusic");
+            music.src = songs[currentSong];
+            music.volume = 0.5;
+            let playing = false;
+
+            window.toggleMusic = function() {
+                if (playing) {
+                    music.pause();
+                    document.getElementById("musicBtn").textContent = "🔇";
+                } else {
+                    music.play();
+                    document.getElementById("musicBtn").textContent = "🎵";
+                }
+                playing = !playing;
+            };
+
+            // ======== FIX: ANIMASI LOVE TIDAK HALANGI KLIK ========
+            const loveStyle = document.createElement("style");
+            loveStyle.innerHTML = `.love { pointer-events:none !important; }`;
+            document.head.appendChild(loveStyle);
+
+        });
+    </script>
+
+    <!-- MUSIK ROMANTIS -->
+    <audio id="bgMusic" autoplay loop></audio>
+    <button id="musicBtn" onclick="toggleMusic()" style="position:fixed;bottom:20px;right:20px;z-index:1000;
+background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);
+border:none;border-radius:50%;width:50px;height:50px;cursor:pointer;
+box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">
+🎵
+</button>
+
+    <script>
+        // daftar lagu romantis
+        const songs = [
+            "music/lagu1.mp3",
+            "music/lagu2.mp3"
+        ];
+
+        let currentSong = 0;
+        const music = document.getElementById("bgMusic");
+
+        // mulai dengan lagu acak
+        currentSong = Math.floor(Math.random() * songs.length);
+        music.src = songs[currentSong];
+        music.volume = 0.5; // volume sedang
+        music.play().catch(() => {}); // autoplay safe mode
+
+        music.addEventListener("ended", () => {
+            currentSong = (currentSong + 1) % songs.length;
+            music.src = songs[currentSong];
+            music.play();
+        });
+
+        // kontrol tombol musik
+        let playing = true;
+
+        function toggleMusic() {
+            if (playing) {
+                music.pause();
+                document.getElementById("musicBtn").textContent = "🔇";
+            } else {
+                music.play();
+                document.getElementById("musicBtn").textContent = "🎵";
+            }
+            playing = !playing;
+        }
+    </script>
+
+</body>
+
+</html>
