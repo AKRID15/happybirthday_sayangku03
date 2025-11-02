@@ -626,31 +626,42 @@
             }];
 
             const loveGrid = document.getElementById('loveGrid');
-  const closingNote = document.getElementById('closingNote');
+    const closingNote = document.getElementById('closingNote');
+    const postDetail = document.getElementById('postDetail');
 
-  postsData.forEach((p, i) => {
-      loveGrid.innerHTML += `
-      <div class='post-card' onclick='openPost(${i + 1})'>
-          <img src='${p.img}'><div class='post-text'>Klik untuk lihat kisah ke-${i + 1}...</div>
-      </div>`;
-  });
+    // ✅ Render hanya sekali (tidak akan duplikat)
+    if (!loveGrid.dataset.rendered) {
+        postsData.forEach((p, i) => {
+            const div = document.createElement('div');
+            div.className = 'post-card';
+            div.onclick = () => openPost(i + 1);
+            div.innerHTML = `
+                <img src="${p.img}">
+                <div class="post-text">Klik untuk lihat kisah ke-${i + 1}...</div>
+            `;
+            loveGrid.appendChild(div);
+        });
+        loveGrid.dataset.rendered = "true"; // penanda sudah dirender
+    }
 
-  window.openPost = function(id) {
-      const d = postsData[id - 1];
-      document.getElementById('loveGrid').style.display = 'none';
-      document.getElementById('postDetail').style.display = 'block';
-      closingNote.style.display = 'none';
-      document.getElementById('postImg').src = d.img;
-      document.getElementById('postText').innerText = d.text;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    // ======== EVENT POST DETAIL ========
+    window.openPost = function(id) {
+        const d = postsData[id - 1];
+        loveGrid.style.display = 'none';
+        postDetail.style.display = 'block';
+        closingNote.style.display = 'none';
+        document.getElementById('postImg').src = d.img;
+        document.getElementById('postText').innerText = d.text;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
-  window.backToLove = function() {
-      document.getElementById('postDetail').style.display = 'none';
-      document.getElementById('loveGrid').style.display = 'grid';
-      closingNote.style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.backToLove = function() {
+        postDetail.style.display = 'none';
+        loveGrid.style.display = 'grid';
+        closingNote.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
 
 
             // ======== GALERI ========
@@ -740,3 +751,4 @@ box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">
 
 
 </html>
+
