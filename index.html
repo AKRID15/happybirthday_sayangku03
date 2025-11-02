@@ -626,37 +626,32 @@
             }];
 
             const loveGrid = document.getElementById('loveGrid');
-            const closingNote = document.getElementById('closingNote');
+  const closingNote = document.getElementById('closingNote');
 
-            postsData.forEach((p, i) => {
-                loveGrid.innerHTML += `
-            <div class='post-card' onclick='openPost(${i + 1})'>
-                <img src='${p.img}'><div class='post-text'>Klik untuk lihat kisah ke-${i + 1}...</div>
-            </div>`;
-            });
+  postsData.forEach((p, i) => {
+      loveGrid.innerHTML += `
+      <div class='post-card' onclick='openPost(${i + 1})'>
+          <img src='${p.img}'><div class='post-text'>Klik untuk lihat kisah ke-${i + 1}...</div>
+      </div>`;
+  });
 
-            window.openPost = function(id) {
-                const d = postsData[id - 1];
-                document.getElementById('loveGrid').style.display = 'none';
-                document.getElementById('postDetail').style.display = 'block';
-                closingNote.style.display = 'none'; // sembunyikan note
-                document.getElementById('postImg').src = d.img;
-                document.getElementById('postText').innerText = d.text;
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            };
+  window.openPost = function(id) {
+      const d = postsData[id - 1];
+      document.getElementById('loveGrid').style.display = 'none';
+      document.getElementById('postDetail').style.display = 'block';
+      closingNote.style.display = 'none';
+      document.getElementById('postImg').src = d.img;
+      document.getElementById('postText').innerText = d.text;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-            window.backToLove = function() {
-                document.getElementById('postDetail').style.display = 'none';
-                document.getElementById('loveGrid').style.display = 'grid';
-                closingNote.style.display = 'block'; // tampilkan lagi note
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            };
+  window.backToLove = function() {
+      document.getElementById('postDetail').style.display = 'none';
+      document.getElementById('loveGrid').style.display = 'grid';
+      closingNote.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
 
             // ======== GALERI ========
             const gallery = document.getElementById('gallery');
@@ -742,5 +737,6 @@ box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">
     </script>
 
 </body>
+
 
 </html>
