@@ -16,27 +16,27 @@
         
         h1,
         h2 {
-            text-shadow: 0 0 10px rgba(255, 255, 255, .3)
+            text-shadow: 0 0 10px rgba(255, 255, 255, .3);
         }
         
         .page {
             display: none;
             padding: 30px 15px;
-            animation: fadeIn .8s ease
+            animation: fadeIn .8s ease;
         }
         
         .active {
-            display: block
+            display: block;
         }
         
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(15px)
+                transform: translateY(15px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0)
+                transform: translateY(0);
             }
         }
         /* animasi love */
@@ -49,7 +49,7 @@
             transform: rotate(45deg);
             animation: floatLove 6s linear infinite;
             opacity: .7;
-            z-index: 0
+            z-index: 0;
         }
         
         .love::before,
@@ -59,27 +59,27 @@
             width: 18px;
             height: 18px;
             border-radius: 50%;
-            background: rgba(255, 182, 193, .9)
+            background: rgba(255, 182, 193, .9);
         }
         
         .love::before {
             top: -9px;
-            left: 0
+            left: 0;
         }
         
         .love::after {
             left: -9px;
-            top: 0
+            top: 0;
         }
         
         @keyframes floatLove {
             0% {
                 transform: translateY(0) rotate(45deg);
-                opacity: 1
+                opacity: 1;
             }
             100% {
                 transform: translateY(-800px) rotate(45deg);
-                opacity: 0
+                opacity: 0;
             }
         }
         /* navbar */
@@ -163,7 +163,7 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             max-width: 900px;
-            margin: auto
+            margin: auto;
         }
         
         .post-card {
@@ -173,11 +173,11 @@
             cursor: pointer;
             transition: .3s;
             text-align: center;
-            box-shadow: 0 0 15px rgba(255, 255, 255, .1)
+            box-shadow: 0 0 15px rgba(255, 255, 255, .1);
         }
         
         .post-card:hover {
-            background: rgba(255, 255, 255, .15)
+            background: rgba(255, 255, 255, .15);
         }
         
         .post-card img {
@@ -185,13 +185,13 @@
             height: 180px;
             object-fit: cover;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, .2)
+            box-shadow: 0 0 10px rgba(255, 255, 255, .2);
         }
         
         .post-text {
             font-style: italic;
             color: #fce4ec;
-            margin-top: 10px
+            margin-top: 10px;
         }
         /* tentang ayang */
         
@@ -202,24 +202,24 @@
             flex-wrap: wrap;
             margin: 40px auto;
             max-width: 800px;
-            gap: 20px
+            gap: 20px;
         }
         
         .about-block img {
             width: 280px;
             border-radius: 20px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, .2)
+            box-shadow: 0 0 15px rgba(255, 255, 255, .2);
         }
         
         .about-text {
             flex: 1;
             min-width: 250px;
             font-style: italic;
-            color: #fce4ec
+            color: #fce4ec;
         }
         
         .right {
-            flex-direction: row-reverse
+            flex-direction: row-reverse;
         }
         /* galeri */
         
@@ -229,7 +229,7 @@
             justify-content: center;
             gap: 12px;
             max-width: 850px;
-            margin: 0 auto
+            margin: 0 auto;
         }
         
         .gallery img {
@@ -239,12 +239,12 @@
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(255, 255, 255, .2);
             transition: .3s;
-            cursor: pointer
+            cursor: pointer;
         }
         
         .gallery img:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 182, 193, .6)
+            box-shadow: 0 0 20px rgba(255, 182, 193, .6);
         }
         /* lightbox & detail */
         
@@ -260,26 +260,26 @@
             align-items: center;
             z-index: 999;
             padding: 20px;
-            flex-direction: column
+            flex-direction: column;
         }
         
         #lightbox-content {
             max-width: 80%;
             max-height: 80%;
-            text-align: center
+            text-align: center;
         }
         
         #lightbox img {
             max-width: 100%;
             max-height: 60vh;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, .4)
+            box-shadow: 0 0 20px rgba(255, 255, 255, .4);
         }
         
         #lightbox p {
             margin-top: 15px;
             color: #fff;
-            font-style: italic
+            font-style: italic;
         }
         
         #closeBtn {
@@ -290,7 +290,7 @@
             border-radius: 20px;
             color: #fff;
             font-weight: 600;
-            cursor: pointer
+            cursor: pointer;
         }
         /* detail post */
         
@@ -298,25 +298,24 @@
             display: none;
             max-width: 750px;
             margin: auto;
-            text-align: center
+            text-align: center;
         }
         
         #postDetail img {
             width: 80%;
             border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, .3)
+            box-shadow: 0 0 15px rgba(255, 255, 255, .3);
         }
         
         #postDetail p {
             margin-top: 15px;
             font-style: italic;
-            color: #fce4ec
+            color: #fce4ec;
         }
     </style>
 </head>
 
 <body>
-
     <!-- animasi love -->
     <script>
         function createLove() {
@@ -344,11 +343,9 @@
             <a href="#" onclick="showPage('pesan')">💌 Pesan</a>
         </div>
     </nav>
-
     <!-- HOME -->
     <div class="page active" id="home" style="text-align:center">
         <h1 class="fade-in">💜 Selamat Ulang Tahun Sayangku 💜</h1>
-
         <p class="fade-in">
             Hari ini langit tersenyum, karena seseorang yang paling berharga di hidupku sedang merayakan hari spesialnya. Setiap detik bersamamu selalu jadi anugerah yang gak pernah berhenti aku syukuri. Kamu adalah alasan kenapa dunia terasa lebih indah, kenapa
             setiap pagi terasa punya makna, dan kenapa aku gak pernah berhenti berharap agar hari-harimu selalu penuh senyum. 🌙✨
@@ -362,7 +359,6 @@
         </p>
     </div>
 
-    <!-- Tambahkan efek fade-in -->
     <style>
         .fade-in {
             opacity: 0;
@@ -387,10 +383,8 @@
         }, {
             threshold: 0.2
         });
-
         fadeElements.forEach(el => observerHome.observe(el));
     </script>
-
 
     <!-- LOVE -->
     <div class="page" id="love">
@@ -399,7 +393,9 @@
             <script>
                 for (let i = 1; i <= 10; i++) {
                     document.write(`<div class='post-card' onclick='openPost(${i})'>
-      <img src='img/c${i}.jpg'><div class='post-text'>Klik untuk lihat kisah ke-${i}...</div></div>`);
+            <img src='img/c${i}.jpg'>
+            <div class='post-text'>Klik untuk lihat kisah ke-${i}...</div>
+          </div>`);
                 }
             </script>
         </div>
@@ -409,7 +405,7 @@
             <p id="postText"></p>
             <button onclick="backToLove()" id="closeBtn">Kembali</button>
         </div>
-        <!-- CATATAN PENUTUP ROMANTIS -->
+
         <div class="note fade-in" id="closingNote">
             <p>
                 Sebenarnya masih banyak banget kisah indah yang belum aku tulis di sini. Ada tawa kecil yang datang tiba-tiba, obrolan panjang tanpa rencana, dan momen sederhana yang mungkin keliatan biasa buat orang lain, tapi buat aku — semuanya berharga banget. Setiap
@@ -418,7 +414,6 @@
             </p>
         </div>
 
-        <!-- MUSIK ROMANTIS UNTUK CATATAN PENUTUP -->
         <audio id="noteMusic" src="music/romantic_instrument.mp3"></audio>
 
         <style>
@@ -445,20 +440,16 @@
         </style>
 
         <script>
-            // Efek fade-in lembut + musik instrumental saat catatan muncul
             const closingNote = document.getElementById('closingNote');
             const noteMusic = document.getElementById('noteMusic');
-            noteMusic.volume = 0.4; // volume lembut
+            noteMusic.volume = 0.4;
 
             const noteObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('show');
-                        if (noteMusic.paused) {
-                            noteMusic.play().catch(() => {});
-                        }
+                        if (noteMusic.paused) noteMusic.play().catch(() => {});
                     } else {
-                        // kalau discroll ke atas, musik berhenti pelan
                         if (!noteMusic.paused) {
                             noteMusic.pause();
                             noteMusic.currentTime = 0;
@@ -471,7 +462,6 @@
 
             noteObserver.observe(closingNote);
         </script>
-
     </div>
 
     <!-- TENTANG -->
@@ -503,37 +493,6 @@
         </div>
     </div>
 
-    <!-- Tambahkan script efek fade-in -->
-    <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-
-    <script>
-        // Efek muncul pelan saat elemen terlihat di layar
-        const fadeEls = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-
-        fadeEls.forEach(el => observer.observe(el));
-    </script>
-
-
     <!-- GALERI -->
     <div class="page" id="galeri">
         <h2 style="text-align:center">📸 Galeri Kenangan 📸</h2>
@@ -549,183 +508,123 @@
     <!-- PESAN -->
     <div class="page" id="pesan">
         <h2 style="text-align:center">💌 Untuk ayang 💌</h2>
-        <div style="max-width:700px;margin:auto;background:rgba(255,255,255,.08);
- border-radius:20px;padding:20px">
+        <div style="max-width:700px;margin:auto;background:rgba(255,255,255,.08); border-radius:20px;padding:20px">
             <p style="text-align: center;">Selamat ulang tahun, sayang. 💕</p>
-            <p>Di hari spesialmu ini, aku cuma mau bilang terima kasih sudah hadir dan membuat hidupku terasa lebih lengkap dan berwarna.</p>
-
+            <p>Di hari spesialmu ini, aku cuma mau bilang terima kasih sudah hadir dan membuat hidupku terasa lebih lengkap dan berwarna.
+            </p>
             <p>Semoga setiap langkahmu selalu dipenuhi kebahagiaan, semoga semua impianmu satu per satu jadi kenyataan, dan semoga aku selalu punya kesempatan untuk melihatmu tumbuh dan bahagia.</p>
-
             <p>Kamu adalah salah satu hal terbaik yang pernah aku temui, dan aku bersyukur bisa ada di sampingmu, bukan cuma hari ini, tapi selamanya.</p>
-
             <p>Selamat bertambah usia, cintaku. Jangan lupa, hari ini kamu berhak bahagia sepenuhnya. 💐</p>
             <img src="img/p1.jpg" style="width:100%;border-radius:15px;margin-top:10px">
         </div>
     </div>
 
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+        <div id="lightbox-content">
+            <img id="lightbox-img" src="">
+            <p id="lightbox-text"></p>
+            <button id="closeBtn" onclick="closeLightbox()">Kembali</button>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('show');
+        }
 
-            // ======== NAVBAR ========
-            window.toggleMenu = function() {
-                document.getElementById('navLinks').classList.toggle('show');
-            };
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            document.getElementById('navLinks').classList.remove('show');
+        }
 
-            window.showPage = function(id) {
-                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                document.getElementById(id).classList.add('active');
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-                document.getElementById('navLinks').classList.remove('show');
-            };
+        function openLightbox(src, txt) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-text').innerText = txt;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
 
-            // ======== LIGHTBOX ========
-            window.openLightbox = function(src, txt) {
-                document.getElementById('lightbox-img').src = src;
-                document.getElementById('lightbox-text').innerText = txt;
-                document.getElementById('lightbox').style.display = 'flex';
-            };
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
 
-            window.closeLightbox = function() {
-                document.getElementById('lightbox').style.display = 'none';
-            };
-
-            // ======== DATA POST LOVE ========
-            const postsData = [{
-                img: 'img/c1.jpg',
-                text: 'Hari itu bukan sekadar pertemuan biasa tepatnya di mixue, tapi awal dari sesuatu yang hangat dan berharga. Kita masih malu-malu, belum berani foto muka, tapi udah bisa ketawa bareng main UNO balok kayak anak kecil yang gak pengen waktu cepet berlalu. Dari tawa sederhana itu, aku tahu... ada sesuatu yang istimewa antara kita. 💜'
-            }, {
-                img: 'img/c2.jpg',
-                text: 'Hari Sabtu itu masih aku inget jelas hari di mana aku jemput Ayang pulang sekolah, dan spontan kita mutusin buat main ke Pasir Putih. Kita sholat bareng, ngobrol sambil nikmatin angin sore, dan mulai berani foto-foto meski masih malu-malu. Rasanya tenang banget, kayak dunia ngasih waktu khusus buat kita berdua. Sampai akhirnya nyamuk dateng ngejar karena bajuku hitam, dan tiket parkir malah hilang… tapi anehnya, semua itu justru jadi bagian dari kenangan paling lucu dan manis yang gak bakal aku lupa. 💜'
-            }, {
-                img: 'img/c3.jpg',
-                text: 'Weekend itu kita main ke GOR bulutangkis, udah niat banget siap-siap dari rumah. Gak nyangka di sana aku malah ketemu temen lama, dan suasananya langsung cair. Ayang waktu itu masih agak malu, jadi gak ikut main, cuma nonton sambil senyum-senyum di pinggir lapangan. Tapi justru itu yang bikin momen hari itu berkesan — lihat dia duduk sambil ngeliatin aku main, sesekali ketawa, rasanya tenang banget. Setelahnya kita sempet foto-foto juga, dan entah kenapa, foto di hari itu keliatan sederhana tapi ngangenin banget. 💜'
-            }, {
-                img: 'img/c4.jpg',
-                text: 'Ini foto waktu kita ke Mixue lagi, kali kedua setelah pertemuan pertama yang masih malu-malu. Bedanya, kali ini semuanya terasa lebih hangat. Kita udah mulai bisa ketawa lepas, ngobrol tanpa canggung, dan saling godain sambil nikmatin pesanan yang udah kita tunggu. Ada tawa yang pecah di antara sendok es krim, dan foto-foto kecil yang jadi saksi betapa nyamannya aku di samping kamu. Mungkin kedengarannya sederhana, tapi buatku, waktu sesederhana itu justru yang paling berharga. 💜'
-            }, {
-                img: 'img/c5.jpg',
-                text: 'Kita balik lagi ke GOR bulutangkis, tapi kali ini suasananya beda banget. Awalnya tempatnya sepi, sampai akhirnya kita mutusin buat langsung ke rumah pemiliknya dan dikasih kunci biar bisa masuk. Rasanya lucu tapi juga hangat, kayak dunia cuma nyediain tempat itu buat kita berdua. Bedanya sama yang dulu, sekarang Ayang udah mau ikut main — ketawa, bercanda, dan sesekali ngeluarin ekspresi malu yang gemesin banget. Dari main bareng, foto-foto, sampai hal-hal kecil yang kita lakuin hari itu, semuanya terasa sempurna. 💜'
-            }, {
-                img: 'img/c6.jpg',
-                text: 'Hari itu sekolah rame banget, suasananya beda dari biasanya karena ada acara Hari Santri. Aku pake baju koko, Ayang pake gamis — dan entah kenapa, kita keliatan cocok banget bareng. Kita ikut acara sama-sama, ngobrol kecil di sela-sela rame orang, dan sesekali saling lempar senyum yang cuma kita berdua ngerti artinya. Setelah acara selesai, kita sempet ke kantin bareng, ketawa karena hal-hal kecil yang gak penting, terus foto-foto buat kenang-kenangan. Hari itu sederhana, tapi rasanya hangat banget — kayak Tuhan sengaja bikin momen itu biar aku bisa liat betapa indahnya Ayang dalam segala hal. 💜'
-            }, {
-                img: 'img/c7.jpg',
-                text: 'Pulang sekolah waktu itu, kita sepakat buat nyobain seblak yang lagi viral. Tempatnya gak terlalu besar, tapi suasananya nyaman banget — mungkin karena ada kamu di sana. Kita pesen seblak versi jumbo, terus nunggu sambil bercanda dan cerita hal-hal kecil yang cuma kita ngerti. Saat makan, kita sempet bikin video kenangan, ketawa karena pedesnya kebangetan, tapi justru itu yang bikin semuanya seru. Hari itu mungkin cuma tentang seblak, tapi buatku, momen sederhana itu berasa istimewa banget karena aku ngelaluinnya bareng kamu. 💜'
-            }, {
-                img: 'img/c8.jpg',
-                text: 'Masih inget banget hari itu di sekolah lagi ada acara lomba. Suasananya rame, tapi yang paling aku inget justru waktu kita mutusin buat antre di foto booth. Antriannya lumayan panjang, panas juga, tapi rasanya gak masalah karena aku bareng kamu. Itu pertama kalinya kita foto berdua di tempat kayak gitu — deg-degan, malu, tapi juga seneng banget. Pas hasil fotonya keluar, aku cuma bisa senyum, karena di kertas kecil itu ada kenangan berharga: dua orang yang gak nyangka bakal se-dekat ini. 💜'
-            }, {
-                img: 'img/c9.jpg',
-                text: 'Hari itu aku masih inget jelas, badan masih sakit gara-gara jatuh dari motor. Aku kira hari itu bakal sepi dan cuma diisi rasa nyeri, tapi ternyata kamu dateng. Padahal kamu baru selesai dari acara nikahan saudaramu, pasti capek, tapi kamu tetep nyempetin waktu buat jenguk aku. Kamu dateng sambil bawa makanan, senyum, dan perhatian yang gak bisa diganti apa pun. Rasanya campur aduk — kaget, seneng, haru, semuanya jadi satu. Aku ngeliat kamu duduk di samping, ngobrol ringan, sesekali nyuruh aku istirahat, dan di situ aku sadar… cinta itu gak melulu soal ketawa bareng, tapi tentang siapa yang tetep ada waktu kamu gak baik-baik aja. 💜'
-            }, {
-                img: 'img/c10.jpg',
-                text: 'Hari itu kita famtrip ke Trans Studio Bandung bareng amang dan bibi kamu, dan jujur… itu salah satu hari paling seru. Sebelum masuk, kita makan bareng dulu — ngobrol, ketawa, dan nikmatin suasana rame khas weekend. Begitu masuk, suasananya luar biasa ramai, tapi serunya gak kalah. Kita akhirnya mutusin buat naik wahana Jelajah, yang katanya santai, cuma keliling hutan Amazon. Awalnya tenang, adem, sampai bagian simulasi air terjun datang tiba-tiba dan jantung rasanya copot! 😆 Tapi di balik teriakan dan baju yang basah, aku seneng banget. Karena di momen itu, aku sadar… gak peduli seberapa deras air atau seberapa rame tempatnya, selama bareng kamu, semua terasa menyenangkan. 💜'
-            }];
-
-            const loveGrid = document.getElementById('loveGrid');
-    const closingNote = document.getElementById('closingNote');
-    const postDetail = document.getElementById('postDetail');
-
-    // ✅ Render hanya sekali (tidak akan duplikat)
-    if (!loveGrid.dataset.rendered) {
-        postsData.forEach((p, i) => {
-            const div = document.createElement('div');
-            div.className = 'post-card';
-            div.onclick = () => openPost(i + 1);
-            div.innerHTML = `
-                <img src="${p.img}">
-                <div class="post-text">Klik untuk lihat kisah ke-${i + 1}...</div>
-            `;
-            loveGrid.appendChild(div);
-        });
-        loveGrid.dataset.rendered = "true"; // penanda sudah dirender
-    }
-
-    // ======== EVENT POST DETAIL ========
-    window.openPost = function(id) {
-        const d = postsData[id - 1];
-        loveGrid.style.display = 'none';
-        postDetail.style.display = 'block';
-        closingNote.style.display = 'none';
-        document.getElementById('postImg').src = d.img;
-        document.getElementById('postText').innerText = d.text;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    window.backToLove = function() {
-        postDetail.style.display = 'none';
-        loveGrid.style.display = 'grid';
-        closingNote.style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+        const postsData = [{
+            img: 'img/c1.jpg',
+            text: 'Hari itu bukan sekadar pertemuan biasa tepatnya di mixue, tapi awal dari sesuatu yang hangat dan berharga. Kita masih malu-malu, belum berani foto muka, tapi udah bisa ketawa bareng main UNO balok kayak anak kecil yang gak pengen waktu cepet berlalu. Dari tawa sederhana itu, aku tahu... ada sesuatu yang istimewa antara kita. 💜'
+        }, {
+            img: 'img/c2.jpg',
+            text: 'Hari Sabtu itu masih aku inget jelas hari di mana aku jemput Ayang pulang sekolah, dan spontan kita mutusin buat main ke Pasir Putih. Kita sholat bareng, ngobrol sambil nikmatin angin sore, dan mulai berani foto-foto meski masih malu-malu. Rasanya tenang banget, kayak dunia ngasih waktu khusus buat kita berdua. Sampai akhirnya nyamuk dateng ngejar karena bajuku hitam, dan tiket parkir malah hilang… tapi anehnya, semua itu justru jadi bagian dari kenangan paling lucu dan manis yang gak bakal aku lupa. 💜'
+        }, {
+            img: 'img/c3.jpg',
+            text: 'Weekend itu kita main ke GOR bulutangkis, udah niat banget siap-siap dari rumah. Gak nyangka di sana aku malah ketemu temen lama, dan suasananya langsung cair. Ayang waktu itu masih agak malu, jadi gak ikut main, cuma nonton sambil senyum-senyum di pinggir lapangan. Tapi justru itu yang bikin momen hari itu berkesan — lihat dia duduk sambil ngeliatin aku main, sesekali ketawa, rasanya tenang banget. Setelahnya kita sempet foto-foto juga, dan entah kenapa, foto di hari itu keliatan sederhana tapi ngangenin banget. 💜'
+        }, {
+            img: 'img/c4.jpg',
+            text: 'Ini foto waktu kita ke Mixue lagi, kali kedua setelah pertemuan pertama yang masih malu-malu. Bedanya, kali ini semuanya terasa lebih hangat. Kita udah mulai bisa ketawa lepas, ngobrol tanpa canggung, dan saling godain sambil nikmatin pesanan yang udah kita tunggu. Ada tawa yang pecah di antara sendok es krim, dan foto-foto kecil yang jadi saksi betapa nyamannya aku di samping kamu. Mungkin kedengarannya sederhana, tapi buatku, waktu sesederhana itu justru yang paling berharga. 💜'
+        }, {
+            img: 'img/c5.jpg',
+            text: 'Kita balik lagi ke GOR bulutangkis, tapi kali ini suasananya beda banget. Awalnya tempatnya sepi, sampai akhirnya kita mutusin buat langsung ke rumah pemiliknya dan dikasih kunci biar bisa masuk. Rasanya lucu tapi juga hangat, kayak dunia cuma nyediain tempat itu buat kita berdua. Bedanya sama yang dulu, sekarang Ayang udah mau ikut main — ketawa, bercanda, dan sesekali ngeluarin ekspresi malu yang gemesin banget. Dari main bareng, foto-foto, sampai hal-hal kecil yang kita lakuin hari itu, semuanya terasa sempurna. 💜'
+        }, {
+            img: 'img/c6.jpg',
+            text: 'Hari itu sekolah rame banget, suasananya beda dari biasanya karena ada acara Hari Santri. Aku pake baju koko, Ayang pake gamis — dan entah kenapa, kita keliatan cocok banget bareng. Kita ikut acara sama-sama, ngobrol kecil di sela-sela rame orang, dan sesekali saling lempar senyum yang cuma kita berdua ngerti artinya. Setelah acara selesai, kita sempet ke kantin bareng, ketawa karena hal-hal kecil yang gak penting, terus foto-foto buat kenang-kenangan. Hari itu sederhana, tapi rasanya hangat banget — kayak Tuhan sengaja bikin momen itu biar aku bisa liat betapa indahnya Ayang dalam segala hal. 💜'
+        }, {
+            img: 'img/c7.jpg',
+            text: 'Pulang sekolah waktu itu, kita sepakat buat nyobain seblak yang lagi viral. Tempatnya gak terlalu besar, tapi suasananya nyaman banget — mungkin karena ada kamu di sana. Kita pesen seblak versi jumbo, terus nunggu sambil bercanda dan cerita hal-hal kecil yang cuma kita ngerti. Saat makan, kita sempet bikin video kenangan, ketawa karena pedesnya kebangetan, tapi justru itu yang bikin semuanya seru. Hari itu mungkin cuma tentang seblak, tapi buatku, momen sederhana itu berasa istimewa banget karena aku ngelaluinnya bareng kamu. 💜'
+        }, {
+            img: 'img/c8.jpg',
+            text: 'Masih inget banget hari itu di sekolah lagi ada acara lomba. Suasananya rame, tapi yang paling aku inget justru waktu kita mutusin buat antre di foto booth. Antriannya lumayan panjang, panas juga, tapi rasanya gak masalah karena aku bareng kamu. Itu pertama kalinya kita foto berdua di tempat kayak gitu — deg-degan, malu, tapi juga seneng banget. Pas hasil fotonya keluar, aku cuma bisa senyum, karena di kertas kecil itu ada kenangan berharga: dua orang yang gak nyangka bakal se-dekat ini. 💜'
+        }, {
+            img: 'img/c9.jpg',
+            text: 'Hari itu aku masih inget jelas, badan masih sakit gara-gara jatuh dari motor. Aku kira hari itu bakal sepi dan cuma diisi rasa nyeri, tapi ternyata kamu dateng. Padahal kamu baru selesai dari acara nikahan saudaramu, pasti capek, tapi kamu tetep nyempetin waktu buat jenguk aku. Kamu dateng sambil bawa makanan, senyum, dan perhatian yang gak bisa diganti apa pun. Rasanya campur aduk — kaget, seneng, haru, semuanya jadi satu. Aku ngeliat kamu duduk di samping, ngobrol ringan, sesekali nyuruh aku istirahat, dan di situ aku sadar… cinta itu gak melulu soal ketawa bareng, tapi tentang siapa yang tetep ada waktu kamu gak baik-baik aja. 💜'
+        }, {
+            img: 'img/c10.jpg',
+            text: 'Hari itu kita famtrip ke Trans Studio Bandung bareng amang dan bibi kamu, dan jujur… itu salah satu hari paling seru. Sebelum masuk, kita makan bareng dulu — ngobrol, ketawa, dan nikmatin suasana rame khas weekend. Begitu masuk, suasananya luar biasa ramai, tapi serunya gak kalah. Kita akhirnya mutusin buat naik wahana Jelajah, yang katanya santai, cuma keliling hutan Amazon. Awalnya tenang, adem, sampai bagian simulasi air terjun datang tiba-tiba dan jantung rasanya copot! 😆 Tapi di balik teriakan dan baju yang basah, aku seneng banget. Karena di momen itu, aku sadar… gak peduli seberapa deras air atau seberapa rame tempatnya, selama bareng kamu, semua terasa menyenangkan. 💜'
+        }];
 
 
+        function openPost(id) {
+            const d = postsData[id - 1];
+            document.getElementById('loveGrid').style.display = 'none';
+            document.getElementById('closingNote').style.display = 'none'; // 🔥 sembunyikan catatan
+            document.getElementById('postDetail').style.display = 'block';
+            document.getElementById('postImg').src = d.img;
+            document.getElementById('postText').innerText = d.text;
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
 
-            // ======== GALERI ========
-           const gallery = document.getElementById('galeri');
-
-            for (let i = 1; i <= 20; i++) {
-                gallery.innerHTML += `<img src="img/g${i}.jpg" onclick="openLightbox('img/g${i}.jpg','')">`;
-            }
-
-            // ======== MUSIK ========
-            const songs = [
-                "https://akrid15.vercel.app/music/lagu1.mp3",
-                "https://akrid15.vercel.app/music/lagu2.mp3"
-            ];
-
-            let currentSong = Math.floor(Math.random() * songs.length);
-            const music = document.getElementById("bgMusic");
-            music.src = songs[currentSong];
-            music.volume = 0.5;
-            let playing = false;
-
-            window.toggleMusic = function() {
-                if (playing) {
-                    music.pause();
-                    document.getElementById("musicBtn").textContent = "🔇";
-                } else {
-                    music.play();
-                    document.getElementById("musicBtn").textContent = "🎵";
-                }
-                playing = !playing;
-            };
-
-            // ======== FIX: ANIMASI LOVE TIDAK HALANGI KLIK ========
-            const loveStyle = document.createElement("style");
-            loveStyle.innerHTML = `.love { pointer-events:none !important; }`;
-            document.head.appendChild(loveStyle);
-
-        });
+        function backToLove() {
+            document.getElementById('postDetail').style.display = 'none';
+            document.getElementById('loveGrid').style.display = 'grid';
+            document.getElementById('closingNote').style.display = 'block'; // 🔥 tampilkan lagi catatan
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 
     <!-- MUSIK ROMANTIS -->
     <audio id="bgMusic" autoplay loop></audio>
     <button id="musicBtn" onclick="toggleMusic()" style="position:fixed;bottom:20px;right:20px;z-index:1000;
-background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);
-border:none;border-radius:50%;width:50px;height:50px;cursor:pointer;
-box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">
-🎵
-</button>
+  background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);
+  border:none;border-radius:50%;width:50px;height:50px;cursor:pointer;
+  box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">🎵</button>
 
     <script>
-        // daftar lagu romantis
-        const songs = [
-            "music/lagu1.mp3",
-            "music/lagu2.mp3"
-        ];
-
-        let currentSong = 0;
+        const songs = ["music/lagu1.mp3", "music/lagu2.mp3"];
+        let currentSong = Math.floor(Math.random() * songs.length);
         const music = document.getElementById("bgMusic");
-
-        // mulai dengan lagu acak
-        currentSong = Math.floor(Math.random() * songs.length);
         music.src = songs[currentSong];
-        music.volume = 0.5; // volume sedang
-        music.play().catch(() => {}); // autoplay safe mode
+        music.volume = 0.5;
+        music.play().catch(() => {});
 
         music.addEventListener("ended", () => {
             currentSong = (currentSong + 1) % songs.length;
@@ -733,7 +632,6 @@ box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">
             music.play();
         });
 
-        // kontrol tombol musik
         let playing = true;
 
         function toggleMusic() {
@@ -747,10 +645,22 @@ box-shadow:0 0 10px rgba(255,255,255,0.3);color:#fff;font-size:1.4em;">
             playing = !playing;
         }
     </script>
+    <script>
+        // 🔥 Biar semua elemen fade-in di halaman manapun aktif
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observerAll = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        fadeEls.forEach(el => observerAll.observe(el));
+    </script>
 
 </body>
 
-
 </html>
-
-
